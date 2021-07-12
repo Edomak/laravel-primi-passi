@@ -32,3 +32,10 @@ Route::get('/music', function () {
     ];
     return view('music', $data);
 });
+
+Route::get('/if', function () {
+    $data = [
+        "numbers" => [12, 25, 36,44,67]
+    ];
+    return view('if', $data);
+});
