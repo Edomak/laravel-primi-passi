@@ -13,10 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/home', function () {
     $data = [
         "primo" => "Hello",
         "test" => "World!"
     ];
     return view('home', $data);
+});
+
+Route::get('/music', function () {
+    $data = [
+        "genres" => [
+            "Indie-Rock", 
+            "Alternative-Rock", 
+            "Metal", 
+            "Punk"
+        ]
+    ];
+    return view('music', $data);
 });
